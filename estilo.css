@@ -1,0 +1,23 @@
+body{
+    
+ padding: auto;
+}
+div {
+    background-color: teal;
+    text-align: center;
+    border:blanchedalmond solid 5px;
+    width: fit-content;
+    margin: auto;
+    padding: auto;
+    
+    
+   
+}
+button{
+    
+   
+}
+
+button:hover{
+    background-color:blue;
+}
