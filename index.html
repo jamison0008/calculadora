@@ -8,21 +8,39 @@
     <link rel="stylesheet" href="/estilo.css">
 </head>
 <body>
-    <div class="tecladonum"> 
-        
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <br>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <br>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <br>
-        <button>0</button>
-</div>
+<div id="calc">
+    <label>Calculadora</label>
+    <br>
+    <input type="text" class="display" id="tela1" value="0">
+    <br>
+    <input type="text" class="display" id="tela2" value="0" disabled>
+    
+    <div id="tecladonum"> 
+        <div id="line1">
+            <button onclick="um()">1</button>
+            <button onclick="dois()">2</button>
+            <button onclick="tres()">3</button>
+            <button onclick="dividir()">/</button>
+        </div>
+        <div id="line2">
+            <button onclick="quatro()">4</button>
+            <button onclick="cinco()">5</button>
+            <button onclick="seis()">6</button>
+            <button onclick="vezes()">x</button>
+        </div>
+        <div id="line3">
+            <button onclick="sete()">7</button>
+            <button onclick="oito()">8</button>
+            <button onclick="nove()">9</button>
+            <button onclick="menos()">-</button>
+        </div>
+        <div id="line4">
+            <button onclick="ponto()">.</button>
+            <button onclick="zero()">0</button>
+            <button onclick="igual()">=</button>
+            <button onclick="mais()">+</button>
+        </div>
+    </div><!--tecladonum -->
+</div><!--calc -->
 </body>
 </html>
