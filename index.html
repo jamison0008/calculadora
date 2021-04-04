@@ -6,41 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/estilo.css">
+    <link rel="script" href="/calculadora.js">
 </head>
 <body>
 <div id="calc">
     <label>Calculadora</label>
     <br>
-    <input type="text" class="display" id="tela1" value="0">
+    <input type="text" class="display" id="tela1"  value="0">
     <br>
     <input type="text" class="display" id="tela2" value="0" disabled>
     
     <div id="tecladonum"> 
         <div id="line1">
-            <button onclick="um()">1</button>
-            <button onclick="dois()">2</button>
-            <button onclick="tres()">3</button>
-            <button onclick="dividir()">/</button>
+            <button onclick="calc()" onkeypress="calc()" value="1">1</button>
+            <button onclick="calc()" value="200">2</button>
+            <button onclick="calc()" value="3">3</button>
+            <button onclick="calc()" value="/">/</button>
         </div>
         <div id="line2">
-            <button onclick="quatro()">4</button>
-            <button onclick="cinco()">5</button>
-            <button onclick="seis()">6</button>
-            <button onclick="vezes()">x</button>
+            <button onclick="calc()"value="4">4</button>
+            <button onclick="calc()" value="5">5</button>
+            <button onclick="calc()"  value="6">6</button>
+            <button onclick="calc()" value="x">x</button>
         </div>
         <div id="line3">
-            <button onclick="sete()">7</button>
-            <button onclick="oito()">8</button>
-            <button onclick="nove()">9</button>
-            <button onclick="menos()">-</button>
+            <button onclick="calc()"  value="7">7</button>
+            <button onclick="calc()"  value="8">8</button>
+            <button onclick="calc()"  value="9">9</button>
+            <button onclick="calc()" value="-">-</button>
         </div>
         <div id="line4">
-            <button onclick="ponto()">.</button>
-            <button onclick="zero()">0</button>
-            <button onclick="igual()">=</button>
-            <button onclick="mais()">+</button>
+            <button onclick="calc()" value=".">.</button>
+            <button onclick="calc()"  value="0">0</button>
+            <button onclick="calc()" value="=">=</button>
+            <button onclick="calc()"  value="+">+</button>
         </div>
     </div><!--tecladonum -->
 </div><!--calc -->
+<script src="calculadora.js"></script>
 </body>
 </html>
