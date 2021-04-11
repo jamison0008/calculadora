@@ -1,30 +1,82 @@
-let display = document.querySelector("#tela1");
+let disp1 =document.querySelector("#tela1");
+let disp2 =document.querySelector("#tela2");
+let carac;
+let comp,comp1,comp2;
 
-let valor = String();
+//input via botão da interface
+window.addEventListener("onclick",inserirb);
+    function inserirb(a){
+    carac = a;
+    calc(a);
+    }
+//input via teclado
+window.addEventListener("keydown",inserirt);
+    function inserirt(a){
+    carac = a.key;
+    calc(carac);
+    }
 
-window.addEventListener("keypress",calc,false);
-function calc(a){
- if(a.key === "1" 
-  ||a.key === "2" 
-  ||a.key === "3" 
-  ||a.key === "4" 
-  ||a.key === "5" 
-  ||a.key === "6" 
-  ||a.key === "7" 
-  ||a.key === "8" 
-  ||a.key === "9" 
-  ||a.key === "0"){
-
-     valor = valor + a.key;
-     display.value = valor;
-     
-     
-  }
-  
-  if(a.key === "=" || a.key === "Enter"){
+// calculadora 
+ function calc(){
+   if( carac == 1 
+   || carac == 2 
+   || carac == 3 
+   || carac == 4 
+   || carac == 5 
+   || carac == 6 
+   || carac == 7 
+   || carac == 8 
+   || carac == 9 
+   || carac == 0
+   || carac=="+"
+   || carac=="-"
+   || carac=="*"
+   || carac=="/"
+   || carac=="."){
     
-   
+       //inclusão de ponto ao inicio dos valores e correção do display ao iniciar a inserção.
+        if(disp1.innerHTML.length == 1 && disp1.innerHTML == 0 && carac !=="."){
+        disp1.innerHTML="";
+    }
+    //expressão da tela 1
+  disp1.innerHTML +=  carac;
   }
+  //contador de caracteres ate o ultimo operador
+    if (carac=="+"
+     || carac=="-"
+     || carac=="*"
+     || carac=="/")
+     {
+         comp1 = disp1.innerHTML.length-1;
+     }
+ 
+
+
+  //função apagar
+  if(carac == "Backspace"){
+  disp1.innerHTML = disp1.innerHTML.substring(0,disp1.innerHTML.length -1); 
+        if (disp1.innerHTML == ""){
+        disp1.innerHTML=0;
+        } 
+  }
+  //função zerar calculadora.
+  if(carac == "Delete"){
+      disp1.innerHTML =0;
+      comp1 = comp2 = 0;
+  }
+//função igual ou calcular
+  if(carac == "=" || carac == "Enter" ){
+         //repetição da ultima operação com o ultimo resultado se o resultado anterior for igual a operação anterior.
+        if (eval(disp1.innerHTML) == disp2.innerHTML && disp1.innerHTML.length > 2 ){            
+            disp1.innerHTML = disp2.innerHTML + disp1.innerHTML.substr(comp1);            
+            comp2 = disp2.innerHTML.length;
+            comp1= comp2
+        }
+ //valor a ser impresso na tela de resultado        
+  disp2.innerHTML =  eval(disp1.innerHTML);
   
+  }  
 }
+
+
 
