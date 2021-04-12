@@ -8,7 +8,7 @@ body{
     transform: translate(-50%,-50%);
     }
 div#calc{
-    width: auto;
+    width: 220px;
     text-align: center;
     border: rgba(0, 0, 0, 0.384) 10px solid;
     border-radius: 20px;
