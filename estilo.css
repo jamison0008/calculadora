@@ -8,7 +8,7 @@ body{
     transform: translate(-50%,-50%);
     }
 div#calc{
-    width: 220px;
+    width: fit-content;
     text-align: center;
     border: rgba(0, 0, 0, 0.384) 10px solid;
     border-radius: 20px;
@@ -34,8 +34,9 @@ div#tecladonum {
 button {
     font-family: Arial;   
     font-weight: bold; 
-    width:  25px;
-    height: 25px;
+    width:  30px;
+    height: 30px;
+    Text-align:center;
     border:rgba(0, 0, 255, 0.438) solid;
     border-radius: 10px;
     -webkit-transition:background 0.1s ease-out;
